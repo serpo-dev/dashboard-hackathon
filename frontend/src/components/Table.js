@@ -56,24 +56,26 @@ export const Table = () => {
         const rows = rows_names.map(name => {
             const row = rows_objects[name]
 
-            return <TableRow row={row} name={name} />
+            return <TableRow key={name} row={row} name={name} />
         })
 
-        return {rows, rows_names};
+        return { rows, rows_names };
     }
 
     const length = 5;
     const mockData = createData(length);
-    const {rows, rows_names} = createRows(mockData)
-    
-    const createAxisX = () => {
-       
-        const cells = rows_names.map(name => <div className="font-bold w-[70px] h-[70px] pt-6 rotate-[-45deg]">{name}</div>)
+    const { rows, rows_names } = createRows(mockData)
 
-        return (<div className="flex flex-row">
-            <div className="w-[100px]" />
-            {cells}
-        </div>)
+    const createAxisX = () => {
+
+        const cells = rows_names.map(name => <div key={name} className="font-bold w-[70px] h-[70px] pt-6 rotate-[-45deg]">{name}</div>)
+
+        return (
+            <div className="flex flex-row">
+                <div className="w-[100px]" />
+                {cells}
+            </div>
+        )
     }
     const axisX = createAxisX();
     rows.push(axisX)

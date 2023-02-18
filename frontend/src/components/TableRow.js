@@ -3,7 +3,7 @@ import { TableCell } from "./TableCell";
 export const TableRow = (props) => {
     const { row, name } = props;
 
-    const values = row.map(cell => <TableCell value={cell.value} />);
+    const values = row.map((cell, index) => <TableCell key={index} value={cell.value} />);
 
     return (<div className="flex flex-row">
         <div className="flex justify-center items-center font-bold w-[100px]">
