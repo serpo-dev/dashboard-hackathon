@@ -24,3 +24,7 @@ npm run start
 ```
 
 3. Клиент работает на порту 3000. Для просмотра введите в адресную строку `http://localhost:3000/`
+
+## Превью
+
+[Превью](https://github.com/yphwd/dashboard-hackathon/assets.preview.gif)
