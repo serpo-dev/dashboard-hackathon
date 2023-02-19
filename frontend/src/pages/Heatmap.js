@@ -36,9 +36,9 @@ export const Heatmap = () => {
 
     return (
         <div>
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center">
                 <HeatmapCheckbox setParams={setParams} params={params} />
-                <button onClick={submit} className="bg-white rounded-full p-2">Get data</button>
+                <button onClick={submit} className="bg-[#D6E54B] rounded-full pr-2 pl-2 h-[40px]">Сформировать карту</button>
             </div>
 
             <Table data={tableData} />

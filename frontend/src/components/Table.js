@@ -3,24 +3,6 @@ import { TableRow } from "./TableRow";
 export const Table = (props) => {
     const { data } = props;
 
-    const createData = (number) => {
-        const result = [];
-
-        for (let i = 0; i < number; i++) {
-            for (let j = 0; j < number; j++) {
-
-                const obj = {
-                    y: `param_${i + 1}`,
-                    x: `param_${j + 1}`,
-                    value: i === j ? 1 : Math.random().toFixed(2)
-                }
-
-                result.push(obj)
-            }
-        }
-
-        return result;
-    }
 
     const createRows = (data) => {
         const rows_names = [];
@@ -63,18 +45,7 @@ export const Table = (props) => {
         return { rows, rows_names };
     }
 
-    const length = 5;
-    const mockData = createData(length);
-
-    const selectData = () => {
-        if (!data || data.length === 0) {
-            return mockData
-        }
-        return data
-    }
-    const selectedData = selectData();
-
-    const { rows, rows_names } = createRows(selectedData)
+    const { rows, rows_names } = createRows(data)
 
     const createAxisX = () => {
 
@@ -92,5 +63,8 @@ export const Table = (props) => {
 
     return (<div className="flex flex-col m-2">
         {rows}
+        <div className="m-8 font-bold text-red-500">
+            {data === undefined || data.length === 0 && `Для отображения карты выберите параметры  и нажмите "Сформировать карту"`}
+        </div>
     </div>)
 }
