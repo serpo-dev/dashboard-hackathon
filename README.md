@@ -27,4 +27,4 @@ npm run start
 
 ## Превью
 
-[Превью](https://github.com/yphwd/dashboard-hackathon/assets/preview.gif)
+[Превью](https://github.com/yphwd/dashboard-hackathon/blob/master/assets/preview.gif?raw=true)
