@@ -24,7 +24,5 @@ CORS(app, supports_credentials=True)
 def main():
     print('started')
     if request.method == "POST":
-        # paramet = request.body.params_list
-        print(paramet)
-        print('started')
+        paramet = request.json["params_list"]
         return heatmap(data, paramet)

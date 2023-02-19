@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+
 .unselectable {
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -16,8 +18,4 @@
     user-select: none;
     /* Non-prefixed version, currently
                                     not supported by any browser */
-}
-
-body {
-    background-color: rgb(187, 183, 183);
 }

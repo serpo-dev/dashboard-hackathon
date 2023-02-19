@@ -1,6 +1,7 @@
 import { TableRow } from "./TableRow";
 
-export const Table = () => {
+export const Table = (props) => {
+    const { data } = props;
 
     const createData = (number) => {
         const result = [];
@@ -64,7 +65,16 @@ export const Table = () => {
 
     const length = 5;
     const mockData = createData(length);
-    const { rows, rows_names } = createRows(mockData)
+
+    const selectData = () => {
+        if (!data || data.length === 0) {
+            return mockData
+        }
+        return data
+    }
+    const selectedData = selectData();
+
+    const { rows, rows_names } = createRows(selectedData)
 
     const createAxisX = () => {
 
