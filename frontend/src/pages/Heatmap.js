@@ -35,13 +35,14 @@ export const Heatmap = () => {
     }
 
     return (
-        <div>
+        <div className="flex flex-col">
             <div className="flex flex-row items-center">
                 <HeatmapCheckbox setParams={setParams} params={params} />
                 <button onClick={submit} className="bg-[#D6E54B] rounded-full pr-2 pl-2 h-[40px]">Сформировать карту</button>
             </div>
-
-            <Table data={tableData} />
+            <div className="grow ml-[150px]">
+                <Table data={tableData}/>
+            </div>
         </div>
     )
 }

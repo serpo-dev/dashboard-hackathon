@@ -1,7 +1,7 @@
 export const Header = () => {
     return (
-        <div className="bg-slate-900">
-            Header
+        <div className="bg-slate-200 h-[60px]">
+
         </div>
     )
 }

@@ -12,7 +12,7 @@ export const LeftSidebar = () => {
             <img src={Logo} alt="Logo" className='p-4 cursor-pointer' onClick={logoClick} />
             <Menu rootStyles={{ backgroundColor: "#D6E54B", opacity: 1 }}>
                 <MenuItem> География учреждений </MenuItem>
-                <MenuItem > Карта корреляций </MenuItem>
+                <MenuItem active={true} rootStyles={{ backgroundColor: "#e5f5b5", }}> Карта корреляций </MenuItem>
                 <SubMenu label="Общие сведения">
                     <MenuItem> Тепловая карта </MenuItem>
                     <MenuItem> География учреждений </MenuItem>

@@ -49,7 +49,7 @@ export const Table = (props) => {
 
     const createAxisX = () => {
 
-        const cells = rows_names.map(name => <div key={name} className="font-bold w-[70px] h-[70px] pt-6 rotate-[-45deg]">{name}</div>)
+        const cells = rows_names.map(name => <div key={name} className="font-bold w-[70px] h-[150px] mt-[90px] rotate-[-45deg]">{name}</div>)
 
         return (
             <div className="flex flex-row">
